@@ -241,8 +241,6 @@ module Formtastic
         klass.new(self, template, @object, @object_name, method, options).to_html
       end
 
-      protected
-
       # First try if we can detect special things like :file. With CarrierWave the method does have
       # an underlying column so we don't want :string to get selected.
       #
@@ -294,6 +292,8 @@ module Formtastic
           return :string
         end
       end
+
+      protected
 
       # Get a column object for a specified attribute method - if possible.
       def column_for(method) #:nodoc:
